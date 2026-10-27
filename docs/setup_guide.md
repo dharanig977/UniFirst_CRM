@@ -34,8 +34,8 @@ Never paste these into chat, code or a document.
 
 ## 4. Deploy the app on Vercel (a second Vercel project)
 
-1. [vercel.com](https://vercel.com) → **Add New → Project** → import the same repository again.
-2. Set **Root Directory** to `crm-app` (click *Edit* next to it). Vercel detects Vite.
+1. [vercel.com](https://vercel.com) → **Add New → Project** → import the `UniFirst_CRM` repository.
+2. Leave **Root Directory** as the repository root. Vercel detects Vite.
 3. **Environment Variables:**
 
 | Name | Value |
