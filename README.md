@@ -2,6 +2,8 @@
 
 A Salesforce-style CRM for the UniFirst supply-chain project. It keeps the customer side that the ERP doesn't have (customers, contacts, pipeline, **customer demand forecasts**, the **sales budget**, and **which customer each ERP sales order belongs to, at what price**) so the warehouse and Power BI can report **Demand vs Actual vs Budget** by customer × product × month.
 
+Related repositories: the ERP and the analytics warehouse live in [UniFirst_SoftwareDev_SCM](https://github.com/dharanig977/UniFirst_SoftwareDev_SCM). This repo was split out of its `crm-app/` folder with the commit history kept.
+
 | Module | Pages |
 |---|---|
 | Customers | Accounts (list, record page with contacts, opportunities, activities and ERP orders), New account, Contacts, Activities |
