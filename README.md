@@ -1,5 +1,7 @@
 # UniFirst CRM
 
+> **Independent portfolio demo built on synthetic data, not affiliated with UniFirst.**
+
 A Salesforce-style CRM for the UniFirst supply-chain project. It keeps the customer side that the ERP doesn't have (customers, contacts, pipeline, **customer demand forecasts**, the **sales budget**, and **which customer each ERP sales order belongs to, at what price**) so the warehouse and Power BI can report **Demand vs Actual vs Budget** by customer × product × month.
 
 This repo was split out of the ERP repository's `crm-app/` folder with the commit history kept.
