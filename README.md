@@ -2,7 +2,7 @@
 
 A Salesforce-style CRM for the UniFirst supply-chain project. It keeps the customer side that the ERP doesn't have (customers, contacts, pipeline, **customer demand forecasts**, the **sales budget**, and **which customer each ERP sales order belongs to, at what price**) so the warehouse and Power BI can report **Demand vs Actual vs Budget** by customer × product × month.
 
-Related repositories: the ERP and the analytics warehouse live in [UniFirst_SoftwareDev_SCM](https://github.com/dharanig977/UniFirst_SoftwareDev_SCM). This repo was split out of its `crm-app/` folder with the commit history kept.
+This repo was split out of the ERP repository's `crm-app/` folder with the commit history kept.
 
 | Module | Pages |
 |---|---|
@@ -13,6 +13,18 @@ Related repositories: the ERP and the analytics warehouse live in [UniFirst_Soft
 | Reports | Demand vs Actual vs Budget (by month, customer, SKU or warehouse; units or USD; variances; forecast accuracy; CSV), Pipeline report |
 
 Same look and stack as the ERP app: React + TypeScript + Vite, deployed on Vercel. Sign-in uses the **ERP's Supabase Auth**, so the same account works in both apps.
+
+## Project links
+
+This project has three repositories: two source systems and the cloud data warehouse that reads them. The database consoles need a sign-in; no passwords or connection strings are kept in any repository.
+
+| Part | Repository | Database (console link) |
+|---|---|---|
+| ERP (SCM), source 1 | [UniFirst_SoftwareDev_SCM](https://github.com/dharanig977/UniFirst_SoftwareDev_SCM) | Supabase PostgreSQL: [project dashboard](https://supabase.com/dashboard/project/epvnsalihzmnrkqcxkoc) (schemas `raw`, `reporting`, `api`) |
+| CRM, source 2 | [UniFirst_CRM](https://github.com/dharanig977/UniFirst_CRM) | Aiven PostgreSQL: [Aiven console](https://console.aiven.io/) (database `defaultdb`, schema `crm`) |
+| Cloud data warehouse | [UniFirst_DataWarehouse](https://github.com/dharanig977/UniFirst_DataWarehouse) | Neon PostgreSQL: [project console](https://console.neon.tech/app/projects/tiny-band-79271165) (database `neondb`; report schemas `rpt_inventory`, `rpt_demand`) |
+
+**Live ETL console:** https://uni-first-data-warehouse.vercel.app (sign in with an ERP account).
 
 ## How it fits together
 
